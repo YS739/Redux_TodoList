@@ -1,7 +1,7 @@
-import ToDoList from "./pages/ToDoList";
+import { Router } from "react-router-dom";
 
 const App = () => {
-  return <ToDoList></ToDoList>;
+  return <Router />;
 };
 
 export default App;
