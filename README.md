@@ -1,6 +1,6 @@
 # Redux - ToDo List
 
-## 내일배움캠프 4기 React advanced course homework
+## 내일배움캠프 4기 React skilled course homework
 
 ## Tech stack
 
@@ -19,7 +19,7 @@
 
 **2. Create Todo**
 
-**3. Read Todos, Todo**
+**3. Read TodoList, Todo**
 
 **4. Update Todo**
 
