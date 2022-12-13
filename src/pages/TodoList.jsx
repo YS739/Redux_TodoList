@@ -95,7 +95,8 @@ const ToDoList = () => {
         isDone={false}
       />
 
-      {toDoS.map((todo) => {
+      {/* 상세 페이지 연결 시도 - return문이 또 있으니까 이건 TodoBox로 옮기든 하기*/}
+      {/* {toDoS.map((todo) => {
         return (
           <div key={todo.id}>
             <Link to={`/${todo.id}`}>
@@ -103,7 +104,7 @@ const ToDoList = () => {
             </Link>
           </div>
         );
-      })}
+      })} */}
 
       <h2>Done 🎉🎉🎉</h2>
       <ToDoBox

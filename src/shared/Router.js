@@ -9,9 +9,6 @@ const Router = () => {
       <Routes>
         {<Route path="/" element={<ToDoList />} />}
         {<Route path="/:id" element={<Todo />} />}
-        {/* <Route path="/" element={<ToDoList />} /> */}
-        {/* <Route path="/:id" element={<Work />} /> */}
-        {/* work 대신 Todo 넣기(import하고) */}
       </Routes>
     </BrowserRouter>
   );
