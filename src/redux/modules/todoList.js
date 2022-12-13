@@ -44,14 +44,13 @@ const todoList = (state = initialState, action) => {
         ...state,
         todo: [...state.todo, action.payload],
       };
-    case DELETE_TODO:
-      return {
-        todo: [...state.todo, action.payload],
-      };
-    case SWITCH_TODO:
-      return {
-        todo: [...state.todo, action.payload],
-      };
+    // case DELETE_TODO:
+    //   return {
+    //   };
+    // case SWITCH_TODO:
+    //   return {
+    //     todo: [...state.id, action.payload],
+    //   };
     default:
       return state;
   }

@@ -10,27 +10,6 @@ const ToDoList = () => {
   //   { id: 1, title: "독서", content: "IT책 10장 읽기", isDone: true },
   // ]);
 
-  // // 삭제하기 버튼을 눌렀을 때
-  // const deleteToDo = (id) => {
-  //   const newToDoList = toDoS.filter((toDo) => toDo.id !== id);
-  //   setToDoS(newToDoList);
-  // };
-
-  // // 완료, 취소 버튼 눌렀을 때
-  // const switchList = (id) => {
-  //   const switchToDo = toDoS.map((toDo) => {
-  //     if (toDo.id === id) {
-  //       return {
-  //         ...toDo,
-  //         isDone: !toDo.isDone,
-  //       };
-  //     } else {
-  //       return { ...toDo };
-  //     }
-  //   });
-  //   setToDoS(switchToDo);
-  // };
-
   return (
     <div>
       <Header />
@@ -54,7 +33,7 @@ const ToDoList = () => {
       })} */}
 
       <h2>Done 🎉🎉🎉</h2>
-      <TodoContainer />
+      {/* <TodoContainer /> */}
     </div>
   );
 };

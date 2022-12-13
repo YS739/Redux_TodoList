@@ -6,6 +6,8 @@ const TodoContainer = () => {
 
   // TodoList 값 가져오기
   const globalTodo = useSelector((state) => state.todoList.todo);
+  console.log(globalTodo);
+  console.log(globalTodo[0].isDone);
 
   // 삭제하기 버튼을 눌렀을 때
   const deleteToDo = (id) => {
@@ -15,7 +17,7 @@ const TodoContainer = () => {
 
   // 완료, 취소 버튼 눌렀을 때
   const switchList = (id) => {
-    const switchToDo = globalTodo.map((toDo) => {
+    const switchState = globalTodo.map((toDo) => {
       if (toDo.id === id) {
         return {
           ...toDo,
@@ -25,7 +27,7 @@ const TodoContainer = () => {
         return { ...toDo };
       }
     });
-    dispatch(switchTodo(switchToDo));
+    dispatch(switchTodo(switchState));
   };
 
   return (
