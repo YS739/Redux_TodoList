@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addTodo } from "../redux/modules/todoList";
 
 const AddForm = () => {
@@ -8,7 +8,9 @@ const AddForm = () => {
 
   const dispatch = useDispatch();
 
-  //   todoList 값 가져오기(useSelector)
+  //   todoList 값 가져오기
+  const globalTodo = useSelector((state) => state.todoList.todo);
+  console.log(globalTodo);
 
   //   input에 입력한 값 받기
   const onChangeHandler = (e) => {
@@ -26,7 +28,7 @@ const AddForm = () => {
     if (title && content) {
       e.preventDefault();
       dispatch(
-        addTodo({ id: toDoS.length + 1, title, content, isDone: false })
+        addTodo({ id: globalTodo.length + 1, title, content, isDone: false })
       );
       // input 초기화
       setTitle("");
@@ -77,7 +79,7 @@ const AddForm = () => {
           />
         </div>
 
-        <button btnName="add">추가하기</button>
+        <button>추가하기</button>
       </form>
     </div>
   );
