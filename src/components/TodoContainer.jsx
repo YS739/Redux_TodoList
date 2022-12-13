@@ -27,6 +27,8 @@ const TodoContainer = () => {
       }
     });
     dispatch(switchTodo(switchState));
+    // 여기도 여기서 map 쓸 게 아니라 해당 id, isDone 값을 dispatch로 넘겨서
+    // Reducer에서 걸러진 값을 반환하기
   };
 
   return (
