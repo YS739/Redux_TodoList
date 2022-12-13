@@ -27,9 +27,13 @@ const AddForm = () => {
     // 제목과 내용이 모두 입력되었을 때
     if (title && content) {
       e.preventDefault();
-      dispatch(
-        addTodo({ id: globalTodo.length + 1, title, content, isDone: false })
-      );
+      const newToDoS = {
+        id: globalTodo.length + 1,
+        title: title,
+        content: content,
+        isDone: false,
+      };
+      dispatch(addTodo(newToDoS));
       // input 초기화
       setTitle("");
       setContent("");

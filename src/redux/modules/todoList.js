@@ -39,8 +39,11 @@ const initialState = {
 // Reducer
 const todoList = (state = initialState, action) => {
   switch (action.type) {
-    // case ADD_TODO:
-    //   return {};
+    case ADD_TODO:
+      return {
+        ...state,
+        todo: [...state.todo, action.payload],
+      };
     // case DELETE_TODO:
     //   return {};
     // case SWITCH_TODO:
