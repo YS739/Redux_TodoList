@@ -11,8 +11,7 @@ const TodoContainer = () => {
 
   // 삭제하기 버튼을 눌렀을 때
   const deleteToDo = (id) => {
-    const newToDoList = globalTodo.filter((toDo) => toDo.id !== id);
-    dispatch(deleteTodo(newToDoList));
+    dispatch(deleteTodo(id));
   };
 
   // 완료, 취소 버튼 눌렀을 때
