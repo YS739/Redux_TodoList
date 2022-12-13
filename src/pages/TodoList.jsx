@@ -2,12 +2,18 @@ import React, { useState } from "react";
 import Header from "../components/header/Header";
 import AddToDo from "../components/addToDo/AddToDo";
 import ToDoBox from "../components/todoBox/ToDoBox";
+import { Link } from "react-router-dom";
 
 const ToDoList = () => {
   const [toDoS, setToDoS] = useState([
     { id: 0, title: "리액트", content: "리액트 과제 다시 하기", isDone: false },
     { id: 1, title: "독서", content: "IT책 10장 읽기", isDone: true },
   ]);
+
+  const toDoTest = [
+    { id: 0, title: "리액트", content: "리액트 과제 다시 하기", isDone: false },
+    { id: 1, title: "독서", content: "IT책 10장 읽기", isDone: true },
+  ];
 
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
@@ -93,6 +99,16 @@ const ToDoList = () => {
         switchList={switchList}
         isDone={false}
       />
+
+      {toDoTest.map((todo) => {
+        return (
+          <div key={todo.id}>
+            <Link to={`/${todo.id}`}>
+              <span style={{ cursor: "pointer" }}>상세페이지</span>
+            </Link>
+          </div>
+        );
+      })}
 
       <h2>Done 🎉🎉🎉</h2>
       <ToDoBox
