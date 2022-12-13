@@ -57,27 +57,30 @@ const AddForm = () => {
 
   return (
     <div className="add-todo-box">
-      <div className="input-box">
-        <h3>제목</h3>
-        <input
-          placeholder="제목을 입력해주세요."
-          id="title"
-          value={title}
-          onChange={onChangeHandler}
-        />
-        <h3>내용</h3>
-        <input
-          className="input-text"
-          placeholder="내용을 입력해주세요."
-          id="content"
-          value={content}
-          onChange={onChangeHandler}
-        />
-      </div>
+      <form onSubmit={onAddToDoHandler}>
+        <div className="input-box">
+          <h3>제목</h3>
 
-      <CustomButton btnName="add" onClick={onAddToDoHandler}>
-        추가하기
-      </CustomButton>
+          <input
+            placeholder="제목을 입력해주세요."
+            id="title"
+            value={title}
+            onChange={onChangeHandler}
+          />
+          <h3>내용</h3>
+          <input
+            className="input-text"
+            placeholder="내용을 입력해주세요."
+            id="content"
+            value={content}
+            onChange={onChangeHandler}
+          />
+        </div>
+
+        <button btnName="add">추가하기</button>
+      </form>
     </div>
   );
 };
+
+export default AddForm;
