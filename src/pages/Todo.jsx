@@ -13,7 +13,17 @@ const Todo = () => {
 
   const todo = toDoS.find((todo) => todo.id === parseInt(param.id));
 
-  return <div>{todo.content}</div>;
+  return (
+    <div>
+      <div>
+        ID: {todo.id}
+        <button>Todo List</button>
+        {/* link or navigate로 구현하기 */}
+      </div>
+      <div>{todo.title}</div>
+      <div>{todo.content}</div>
+    </div>
+  );
 };
 
 export default Todo;
