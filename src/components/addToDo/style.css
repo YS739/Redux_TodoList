@@ -1,0 +1,63 @@
+.add-todo-box {
+  max-width: 1200px;
+  min-width: 800px;
+  height: 150px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  border: 3px solid #e5dbff;
+  border-radius: 20px;
+}
+
+.input-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-box input {
+  padding: 10px;
+  margin: 0 10px;
+
+  border: none;
+  border-radius: 10px;
+
+  font-weight: 900;
+  font-size: 15px;
+  background: #f3f0ff;
+  color: #495057;
+}
+
+.input-box input:focus-visible {
+  outline: none;
+}
+
+.input-box input:hover {
+  background-color: #e5dbff;
+}
+
+.input-box input:focus {
+  background-color: #e5dbff;
+  color: #495057;
+}
+
+.input-text {
+  width: 220px;
+}
+
+/* button은 custombutton으로 component분리하고 style로 따로 적용 */
+/* .add-btn {
+  background-color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 15px;
+  color: black;
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: 2px;
+
+  cursor: pointer;
+}*/

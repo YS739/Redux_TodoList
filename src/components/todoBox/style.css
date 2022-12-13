@@ -1,0 +1,15 @@
+.list-container {
+  max-width: 1200px;
+  min-width: 800px;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: top;
+
+  margin-left: 20px;
+
+  flex-wrap: wrap;
+
+  height: 350px;
+  overflow-y: scroll;
+}
