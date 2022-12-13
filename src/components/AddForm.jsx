@@ -11,6 +11,7 @@ const AddForm = () => {
   //   todoList 값 가져오기
   const globalTodo = useSelector((state) => state.todoList.todo);
   console.log(globalTodo);
+  console.log(globalTodo[0].isDone);
 
   //   input에 입력한 값 받기
   const onChangeHandler = (e) => {

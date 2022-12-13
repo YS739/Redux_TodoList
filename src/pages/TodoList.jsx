@@ -1,35 +1,35 @@
 import React, { useState } from "react";
 import Header from "../components/header/Header";
-import ToDoBox from "../components/todoBox/ToDoBox";
 import AddForm from "../components/AddForm";
+import TodoContainer from "../components/TodoContainer";
 // import { Link } from "react-router-dom";
 
 const ToDoList = () => {
-  const [toDoS, setToDoS] = useState([
-    { id: 0, title: "리액트", content: "리액트 과제 다시 하기", isDone: false },
-    { id: 1, title: "독서", content: "IT책 10장 읽기", isDone: true },
-  ]);
+  // const [toDoS, setToDoS] = useState([
+  //   { id: 0, title: "리액트", content: "리액트 과제 다시 하기", isDone: false },
+  //   { id: 1, title: "독서", content: "IT책 10장 읽기", isDone: true },
+  // ]);
 
-  // 삭제하기 버튼을 눌렀을 때
-  const deleteToDo = (id) => {
-    const newToDoList = toDoS.filter((toDo) => toDo.id !== id);
-    setToDoS(newToDoList);
-  };
+  // // 삭제하기 버튼을 눌렀을 때
+  // const deleteToDo = (id) => {
+  //   const newToDoList = toDoS.filter((toDo) => toDo.id !== id);
+  //   setToDoS(newToDoList);
+  // };
 
-  // 완료, 취소 버튼 눌렀을 때
-  const switchList = (id) => {
-    const switchToDo = toDoS.map((toDo) => {
-      if (toDo.id === id) {
-        return {
-          ...toDo,
-          isDone: !toDo.isDone,
-        };
-      } else {
-        return { ...toDo };
-      }
-    });
-    setToDoS(switchToDo);
-  };
+  // // 완료, 취소 버튼 눌렀을 때
+  // const switchList = (id) => {
+  //   const switchToDo = toDoS.map((toDo) => {
+  //     if (toDo.id === id) {
+  //       return {
+  //         ...toDo,
+  //         isDone: !toDo.isDone,
+  //       };
+  //     } else {
+  //       return { ...toDo };
+  //     }
+  //   });
+  //   setToDoS(switchToDo);
+  // };
 
   return (
     <div>
@@ -40,12 +40,7 @@ const ToDoList = () => {
 
       {/* isDone을 false, true로 나눠서 toDoBox에서 받아올 때 isDone에 따라 보여주기 */}
       <h2>Working...🔥🔥🔥</h2>
-      <ToDoBox
-        toDoS={toDoS}
-        deleteToDo={deleteToDo}
-        switchList={switchList}
-        isDone={false}
-      />
+      <TodoContainer />
 
       {/* 상세 페이지 연결 시도 - return문이 또 있으니까 이건 TodoBox로 옮기든 하기*/}
       {/* {toDoS.map((todo) => {
@@ -59,12 +54,7 @@ const ToDoList = () => {
       })} */}
 
       <h2>Done 🎉🎉🎉</h2>
-      <ToDoBox
-        toDoS={toDoS}
-        deleteToDo={deleteToDo}
-        switchList={switchList}
-        isDone={true}
-      />
+      <TodoContainer />
     </div>
   );
 };
