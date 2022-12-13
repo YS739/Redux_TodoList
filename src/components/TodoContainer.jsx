@@ -34,7 +34,7 @@ const TodoContainer = () => {
         {globalTodo.map(
           (toDo) =>
             //map으로 돌면서 isDone이 존재하는(&&) ToDoCards를 반환!
-            toDo.isDone === isDone && (
+            toDo.isDone === toDo.isDone && (
               <div key={toDo.id} className="list-box">
                 <div className="content-text">
                   <h2>{toDo.title}</h2>
