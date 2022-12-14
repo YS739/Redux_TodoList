@@ -26,3 +26,4 @@
 **5. Delete Todo**
 
 ## Folder structure
+<img width="86" alt="image" src="https://user-images.githubusercontent.com/112805225/207577751-0989709a-0523-4abd-b871-5a7723095cf8.png">
