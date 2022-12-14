@@ -19,7 +19,7 @@
 
 **2. Create Todo**
 
-**3. Read TodoList, Todo**
+**3. Read TodoList, Todo(detail)**
 
 **4. Update Todo**
 
