@@ -16,7 +16,6 @@ export const addTodo = (payload) => {
 
 // todo 삭제하기
 export const deleteTodo = (payload) => {
-  console.log(payload);
   return {
     type: DELETE_TODO,
     payload,
@@ -61,27 +60,14 @@ const TodoS = (state = initialState, action) => {
 
     // 삭제하기
     case DELETE_TODO:
-      const delState = state.todo;
-      const newTodo = delState.filter((t) => t.id !== action.payload);
-      console.log(newTodo);
       return {
-        todo: [newTodo],
+        todo: action.payload,
       };
 
     // 상태 변경(완료, 취소)
     case SWITCH_TODO:
-      const switchState = state.todo;
-      const newState = switchState.map((toDo) => {
-        if (toDo.id === action.payload) {
-          return {
-            ...toDo,
-            isDone: !toDo.isDone,
-          };
-        }
-      });
-      console.log(newState);
       return {
-        todo: [...state.todo, newState],
+        todo: action.payload,
       };
     default:
       return state;
