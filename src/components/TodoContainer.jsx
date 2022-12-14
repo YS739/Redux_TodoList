@@ -14,19 +14,7 @@ const TodoContainer = ({ isActive }) => {
 
   // 완료, 취소 버튼 눌렀을 때
   const handleSwitchState = (id) => {
-    const switchState = globalTodo.map((toDo) => {
-      if (toDo.id === id) {
-        return {
-          ...toDo,
-          isDone: !toDo.isDone,
-        };
-      } else {
-        return { ...toDo };
-      }
-    });
-    dispatch(switchTodo(switchState));
-    // 여기도 여기서 map 쓸 게 아니라 해당 id, isDone 값을 dispatch로 넘겨서
-    // Reducer에서 걸러진 값을 반환하기
+    dispatch(switchTodo(id));
   };
 
   return (
