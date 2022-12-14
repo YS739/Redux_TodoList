@@ -79,9 +79,8 @@ const AddForm = () => {
             value={content}
             onChange={onChangeHandler}
           />
+          <CustomButton btnName="add">추가하기</CustomButton>
         </InputBox>
-
-        <CustomButton btnName="add">추가하기</CustomButton>
       </form>
     </AddTodoBox>
   );

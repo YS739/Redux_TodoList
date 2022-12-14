@@ -8,16 +8,10 @@ const CustomButton = (props) => {
         <AddBtnStyle onClick={props.onClick}>{props.children}</AddBtnStyle>
       );
     }
-
-    //삭제하기 버튼
-    case "delete": {
-      return <button onClick={props.onClick}>{props.children}</button>;
+    case "delSwitch": {
+      return <BtnStyle onClick={props.onClick}>{props.children}</BtnStyle>;
     }
 
-    // 완료, 취소 버튼
-    case "switch": {
-      return <button onClick={props.onClick}>{props.children}</button>;
-    }
     default: {
       return <button onClick={props.onClick}>{props.children}</button>;
     }
@@ -30,28 +24,29 @@ export default CustomButton;
 
 // 추가하기 버튼 style
 const AddBtnStyle = styled.button`
-  background: "#e5dbff",
-  border: "none",
-  borderRadius: "20px",
-  padding: "10px 15px",
+  background: #e5dbff;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 15px;
+  margin-left: 20px;
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: 2px;
 
-  fontSize: "15px",
-  fontWeight: 900,
-  letterSpacing: "2px",
-
-  cursor: "pointer",`;
+  cursor: pointer;
+`;
 
 // 삭제, 완료, 취소 버튼 중복되는 style
-const btnStyle = {
-  background: "#e5dbff",
-  border: "none",
-  borderRadius: "15px",
-  margin: "0 6px",
-  padding: "5px 7px",
+const BtnStyle = styled.button`
+  background: #e5dbff;
+  border: none;
+  border-radius: 15px;
+  margin: 0 6px;
+  padding: 5px 7px;
 
-  fontSize: "12px",
-  fontWeight: 900,
-  letterSpacing: "2px",
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 2px;
 
-  cursor: "pointer",
-};
+  cursor: pointer;
+`;

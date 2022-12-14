@@ -36,41 +36,43 @@ const TodoContainer = ({ isActive }) => {
   return (
     <ListContainer>
       <h2>{isActive ? "Working...🔥🔥🔥" : "Done 🎉🎉🎉"}</h2>
-      {globalTodo
-        .filter((todo) => todo.isDone === !isActive)
-        .map((todo) => {
-          return (
-            <ListBox key={todo.id}>
-              {globalTodo.map((one) => {
-                return (
-                  <div key={one.id}>
-                    <Link to={`/${one.id}`}>
-                      <span style={{ cursor: "pointer" }}>➡️ 상세보기</span>
-                    </Link>
-                  </div>
-                );
-              })}
-              <ContentText>
-                <h2>{todo.title}</h2>
-                <h4>{todo.content}</h4>
-              </ContentText>
-              <ButtonS>
-                <CustomButton
-                  btnName="delete"
-                  onClick={() => handleDeleteToDo(todo.id)}
-                >
-                  삭제하기
-                </CustomButton>
-                <CustomButton
-                  btnName="switch"
-                  onClick={() => handleSwitchState(todo.id)}
-                >
-                  {todo.isDone ? "취소" : "완료"}
-                </CustomButton>
-              </ButtonS>
-            </ListBox>
-          );
-        })}
+      <AllList>
+        {globalTodo
+          .filter((todo) => todo.isDone === !isActive)
+          .map((todo) => {
+            return (
+              <ListBox key={todo.id}>
+                {globalTodo.map((one) => {
+                  return (
+                    <div key={one.id}>
+                      <Link to={`/${one.id}`}>
+                        <span style={{ cursor: "pointer" }}>➡️ 상세보기</span>
+                      </Link>
+                    </div>
+                  );
+                })}
+                <ContentText>
+                  <h2>{todo.title}</h2>
+                  <h4>{todo.content}</h4>
+                </ContentText>
+                <ButtonS>
+                  <CustomButton
+                    btnName="delSwitch"
+                    onClick={() => handleDeleteToDo(todo.id)}
+                  >
+                    삭제하기
+                  </CustomButton>
+                  <CustomButton
+                    btnName="delSwitch"
+                    onClick={() => handleSwitchState(todo.id)}
+                  >
+                    {todo.isDone ? "취소" : "완료"}
+                  </CustomButton>
+                </ButtonS>
+              </ListBox>
+            );
+          })}
+      </AllList>
     </ListContainer>
   );
 };
@@ -88,9 +90,14 @@ const ListContainer = styled.div`
 
   margin-left: 20px;
 
-  flex-wrap: wrap;
-
   height: 350px;
+`;
+
+const AllList = styled.div`
+  max-width: 1200px;
+  min-width: 800px;
+  display: flex;
+  flex-wrap: wrap;
   overflow-y: scroll;
 `;
 
