@@ -24,7 +24,6 @@ export const deleteTodo = (payload) => {
 
 // todo 상태 변경하기
 export const switchTodo = (payload) => {
-  console.log(payload);
   return {
     type: SWITCH_TODO,
     payload,
@@ -47,29 +46,38 @@ const initialState = {
 // Reducer
 const TodoS = (state = initialState, action) => {
   switch (action.type) {
+    // 추가하기
     case ADD_TODO:
       return {
         ...state,
         todo: [...state.todo, action.payload],
       };
+
+    // 삭제하기
     case DELETE_TODO:
-      const remove = state.todo;
+      const delState = state.todo;
+      const newTodo = delState.filter((t) => t.id !== action.payload);
+      console.log(newTodo);
       return {
-        todo: [...state.todo, remove.filter((t) => t.id !== action.payload)],
+        todo: [...state.todo, newTodo],
       };
+
+    // 상태 변경(완료, 취소)
     case SWITCH_TODO:
+      const switchState = state.todo;
+      const newState = switchState.map((toDo) => {
+        if (toDo.id === action.payload) {
+          return {
+            ...toDo,
+            isDone: !toDo.isDone,
+          };
+        } else {
+          return { ...toDo };
+        }
+      });
+      console.log(newState);
       return {
-        todo: [...state.todo, action.payload],
-        // const switchState = globalTodo.map((toDo) => {
-        //   if (toDo.id === id) {
-        //     return {
-        //       ...toDo,
-        //       isDone: !toDo.isDone,
-        //     };
-        //   } else {
-        //     return { ...toDo };
-        //   }
-        // });
+        todo: [...state.todo, newState],
       };
     default:
       return state;
