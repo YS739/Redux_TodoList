@@ -10,9 +10,9 @@ const Header = () => {
 
 const Footer = () => {
   return (
-    <div>
+    <Foot>
       <h1>화이팅!</h1>
-    </div>
+    </Foot>
   );
 };
 
@@ -38,4 +38,12 @@ const Head = styled.div`
   align-items: center;
 
   margin: 20px 40px;
+`;
+
+const Foot = styled.div`
+  max-width: 1200px;
+  min-width: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;

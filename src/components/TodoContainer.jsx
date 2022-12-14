@@ -85,7 +85,7 @@ const ListContainer = styled.div`
 
   margin-left: 20px;
 
-  height: 350px;
+  height: 300px;
 `;
 
 const AllList = styled.div`
@@ -133,7 +133,7 @@ const DetailLink = styled.span`
   cursor: pointer;
 
   :hover {
-    text-shadow: 1px 1px 3px purple;
+    text-shadow: 3px 3px 4px #b197fc;
   }
 
   font-size: 15px;

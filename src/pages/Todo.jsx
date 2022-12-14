@@ -24,9 +24,7 @@ const Todo = () => {
         </TodoNavi>
       </CardHead>
       <CardMain>
-        <h2 style={{ margin: "0 auto" }}>
-          {theTodo.isDone === false ? "Working🔥" : "Done🎉"}
-        </h2>
+        <span>{theTodo.isDone === false ? "🔥Working🔥" : "🎉Done🎉"}</span>
         <h1>제목: {theTodo.title}</h1>
         <h2>내용: {theTodo.content}</h2>
       </CardMain>
@@ -43,7 +41,7 @@ const DetailBox = styled.div`
 
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  margin: 100px auto;
 
   background-color: white;
   box-shadow: 1px 1px 2px 3px #e5dbff;
@@ -71,6 +69,12 @@ const CardMain = styled.div`
   margin-left: 30px;
 
   line-height: 35px;
+
+  span {
+    margin: 0 auto;
+    color: #db8af0df;
+    font-size: 32px;
+  }
 `;
 
 const TodoNavi = styled.button`
@@ -81,7 +85,7 @@ const TodoNavi = styled.button`
   cursor: pointer;
 
   :hover {
-    text-shadow: 1px 1px 3px purple;
+    text-shadow: 3px 3px 4px #b197fc;
   }
 
   background-color: transparent;

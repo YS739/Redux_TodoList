@@ -132,5 +132,6 @@ const Input = styled.input`
   :focus {
     background-color: #e5dbff;
     color: #495057;
+    box-shadow: 0 0 2px 1px #b197fc;
   }
 `;

@@ -35,15 +35,15 @@ const initialState = {
   todo: [
     {
       id: uuidv4(),
-      title: "리액트",
-      content: "리액트 과제 다시 하기",
-      isDone: false,
+      title: "React",
+      content: "리액트 과제 제출하기",
+      isDone: true,
     },
     {
       id: uuidv4(),
       title: "독서하기",
-      content: "IT책 10장 읽기",
-      isDone: true,
+      content: "<IT지식> 10장 읽기",
+      isDone: false,
     },
   ],
 };
