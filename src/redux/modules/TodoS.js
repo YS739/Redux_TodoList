@@ -44,7 +44,7 @@ const initialState = {
 };
 
 // Reducer
-const todoList = (state = initialState, action) => {
+const TodoS = (state = initialState, action) => {
   switch (action.type) {
     case ADD_TODO:
       return {
@@ -52,10 +52,11 @@ const todoList = (state = initialState, action) => {
         todo: [...state.todo, action.payload],
       };
     case DELETE_TODO:
+      const remove = state.todo;
+      console.log(remove);
       return {
-        //   const newToDoList = globalTodo.filter((toDo) => toDo.id !== id);
         ...state,
-        todo: [...state.todo, action.payload],
+        todo: [...state.todo, remove.filter((t) => t.id !== action.payload)],
       };
     // case SWITCH_TODO:
     //   return {
@@ -68,4 +69,4 @@ const todoList = (state = initialState, action) => {
 };
 
 // export default reducer
-export default todoList;
+export default TodoS;

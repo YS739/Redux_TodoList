@@ -1,11 +1,11 @@
 import { useDispatch, useSelector } from "react-redux";
-import { deleteTodo, switchTodo } from "../redux/modules/todoList";
+import { deleteTodo, switchTodo } from "../redux/modules/TodoS";
 
 const TodoContainer = ({ isActive }) => {
   const dispatch = useDispatch();
 
   // TodoList 값 가져오기
-  const globalTodo = useSelector((state) => state.todoList.todo);
+  const globalTodo = useSelector((state) => state.TodoS.todo);
 
   // 삭제하기 버튼을 눌렀을 때
   const handleDeleteToDo = (id) => {

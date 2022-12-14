@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addTodo } from "../redux/modules/todoList";
+import { addTodo } from "../redux/modules/TodoS";
 import { v4 as uuidv4 } from "uuid";
 
 const AddForm = () => {
