@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { addTodo } from "../redux/modules/TodoS";
 import { v4 as uuidv4 } from "uuid";
 import styled from "styled-components";
+import CustomButton from "./CustomButton";
 
 const AddForm = () => {
   const [title, setTitle] = useState("");
@@ -80,7 +81,7 @@ const AddForm = () => {
           />
         </InputBox>
 
-        <button>추가하기</button>
+        <CustomButton btnName="add">추가하기</CustomButton>
       </form>
     </AddTodoBox>
   );

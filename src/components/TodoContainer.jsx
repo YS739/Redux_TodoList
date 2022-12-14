@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { deleteTodo, switchTodo } from "../redux/modules/TodoS";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import CustomButton from "./CustomButton";
 
 const TodoContainer = ({ isActive }) => {
   const dispatch = useDispatch();
@@ -54,12 +55,18 @@ const TodoContainer = ({ isActive }) => {
                 <h4>{todo.content}</h4>
               </ContentText>
               <ButtonS>
-                <button onClick={() => handleDeleteToDo(todo.id)}>
+                <CustomButton
+                  btnName="delete"
+                  onClick={() => handleDeleteToDo(todo.id)}
+                >
                   삭제하기
-                </button>
-                <button onClick={() => handleSwitchState(todo.id)}>
+                </CustomButton>
+                <CustomButton
+                  btnName="switch"
+                  onClick={() => handleSwitchState(todo.id)}
+                >
                   {todo.isDone ? "취소" : "완료"}
-                </button>
+                </CustomButton>
               </ButtonS>
             </ListBox>
           );
