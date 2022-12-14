@@ -1,6 +1,6 @@
 import React from "react";
-import AddForm from "../components/AddForm";
-import TodoContainer from "../components/TodoContainer";
+import AddForm from "../../redux/modules/AddForm";
+import TodoContainer from "../../redux/modules/TodoContainer";
 import styled from "styled-components";
 
 const ToDoList = () => {

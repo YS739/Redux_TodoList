@@ -1,8 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
-import { deleteTodo, switchTodo } from "../redux/modules/TodoS";
+import { deleteTodo, switchTodo } from "../TodoS";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import CustomButton from "./CustomButton";
+import CustomButton from "../CustomButton";
 
 const TodoContainer = ({ isActive }) => {
   const dispatch = useDispatch();

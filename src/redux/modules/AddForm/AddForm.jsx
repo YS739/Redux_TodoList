@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addTodo } from "../redux/modules/TodoS";
+import { addTodo } from "../TodoS/TodoS";
 import { v4 as uuidv4 } from "uuid";
 import styled from "styled-components";
-import CustomButton from "./CustomButton";
+import CustomButton from "../CustomButton";
 
 const AddForm = () => {
   const [title, setTitle] = useState("");
