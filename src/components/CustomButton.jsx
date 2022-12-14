@@ -33,6 +33,12 @@ const AddBtnStyle = styled.button`
   font-weight: 900;
   letter-spacing: 2px;
 
+  :hover {
+    color: #9775fa;
+    transition: 0.4s;
+
+    box-shadow: 0 0 2px 1px #b197fc;
+  }
   cursor: pointer;
 `;
 
@@ -48,5 +54,11 @@ const BtnStyle = styled.button`
   font-weight: 900;
   letter-spacing: 2px;
 
+  :hover {
+    color: #9775fa;
+    transition: 0.4s;
+
+    box-shadow: 0 0 2px 1px #b197fc;
+  }
   cursor: pointer;
 `;

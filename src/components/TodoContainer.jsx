@@ -42,17 +42,12 @@ const TodoContainer = ({ isActive }) => {
           .map((todo) => {
             return (
               <ListBox key={todo.id}>
-                {globalTodo.map((one) => {
-                  return (
-                    <div key={one.id}>
-                      <Link to={`/${one.id}`}>
-                        <span style={{ cursor: "pointer" }}>➡️ 상세보기</span>
-                      </Link>
-                    </div>
-                  );
-                })}
+                <Link to={`/${todo.id}`}>
+                  <DetailLink>➡️ 상세보기</DetailLink>
+                </Link>
+
                 <ContentText>
-                  <h2>{todo.title}</h2>
+                  <h2 style={{ marginTop: 0 }}>{todo.title}</h2>
                   <h4>{todo.content}</h4>
                 </ContentText>
                 <ButtonS>
@@ -102,7 +97,7 @@ const AllList = styled.div`
 `;
 
 const ListBox = styled.div`
-  width: 250px;
+  width: 260px;
   height: 160px;
 
   display: flex;
@@ -128,4 +123,17 @@ const ButtonS = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
+`;
+
+const DetailLink = styled.span`
+  float: right;
+  margin-right: 15px;
+
+  color: black;
+
+  cursor: pointer;
+
+  :hover {
+    text-shadow: 1px 1px 3px purple;
+  }
 `;
