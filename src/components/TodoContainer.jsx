@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { deleteTodo, switchTodo } from "../redux/modules/TodoS";
+import { Link } from "react-router-dom";
 
 const TodoContainer = ({ isActive }) => {
   const dispatch = useDispatch();
@@ -37,6 +38,15 @@ const TodoContainer = ({ isActive }) => {
                   <button onClick={() => handleSwitchState(todo.id)}>
                     {todo.isDone ? "취소" : "완료"}
                   </button>
+                  {globalTodo.map((one) => {
+                    return (
+                      <div key={one.id}>
+                        <Link to={`/works/${one.id}`}>
+                          <span style={{ cursor: "pointer" }}>➡️ 상세보기</span>
+                        </Link>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             );

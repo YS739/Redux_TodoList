@@ -71,8 +71,6 @@ const TodoS = (state = initialState, action) => {
             ...toDo,
             isDone: !toDo.isDone,
           };
-        } else {
-          return { ...toDo };
         }
       });
       console.log(newState);
