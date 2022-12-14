@@ -2,20 +2,26 @@
 import { Link, useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
 
 const Todo = () => {
   const global = useSelector((state) => state.TodoS.todo);
   const param = useParams();
-
   const theTodo = global.find((list) => list.id === param.id);
+
+  const navigate = useNavigate();
 
   return (
     <DetailBox>
       <CardHead>
         ID: {theTodo.id.slice(0, 8)}
-        <Link to="/">
-          <TodoLink>➡️ Todo List</TodoLink>
-        </Link>
+        <TodoNavi
+          onClick={() => {
+            navigate("/");
+          }}
+        >
+          ➡️ Todo List
+        </TodoNavi>
       </CardHead>
       <CardMain>
         <h2 style={{ margin: "0 auto" }}>
@@ -67,15 +73,19 @@ const CardMain = styled.div`
   line-height: 35px;
 `;
 
-const TodoLink = styled.span`
+const TodoNavi = styled.button`
   float: right;
   margin-right: 15px;
 
   color: black;
-
   cursor: pointer;
 
   :hover {
     text-shadow: 1px 1px 3px purple;
   }
+
+  background-color: transparent;
+  border: none;
+  font-size: 17px;
+  font-weight: 600;
 `;

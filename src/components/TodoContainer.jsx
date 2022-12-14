@@ -42,7 +42,7 @@ const TodoContainer = ({ isActive }) => {
           .map((todo) => {
             return (
               <ListBox key={todo.id}>
-                <Link to={`/${todo.id}`}>
+                <Link to={`/${todo.id}`} style={{ fontWeight: "bold" }}>
                   <DetailLink>➡️ 상세보기</DetailLink>
                 </Link>
 
@@ -130,10 +130,12 @@ const DetailLink = styled.span`
   margin-right: 15px;
 
   color: black;
-
   cursor: pointer;
 
   :hover {
     text-shadow: 1px 1px 3px purple;
   }
+
+  font-size: 15px;
+  font-weight: bold;
 `;
