@@ -10,12 +10,12 @@ const TodoContainer = () => {
   console.log(globalTodo[0].isDone);
 
   // 삭제하기 버튼을 눌렀을 때
-  const deleteToDo = (id) => {
+  const handleDeleteToDo = (id) => {
     dispatch(deleteTodo(id));
   };
 
   // 완료, 취소 버튼 눌렀을 때
-  const switchList = (id) => {
+  const handleSwitchState = (id) => {
     const switchState = globalTodo.map((toDo) => {
       if (toDo.id === id) {
         return {
@@ -46,8 +46,10 @@ const TodoContainer = () => {
                   <h4>{todo.content}</h4>
                 </div>
                 <div className="buttons">
-                  <button onClick={() => deleteToDo(todo.id)}>삭제하기</button>
-                  <button onClick={() => switchList(todo.id)}>
+                  <button onClick={() => handleDeleteToDo(todo.id)}>
+                    삭제하기
+                  </button>
+                  <button onClick={() => handleSwitchState(todo.id)}>
                     {todo.isDone ? "취소" : "완료"}
                   </button>
                 </div>
