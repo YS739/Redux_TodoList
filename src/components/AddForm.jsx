@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addTodo } from "../redux/modules/TodoS";
 import { v4 as uuidv4 } from "uuid";
+import styled from "styled-components";
 
 const AddForm = () => {
   const [title, setTitle] = useState("");
@@ -59,31 +60,77 @@ const AddForm = () => {
   };
 
   return (
-    <div className="add-todo-box">
+    <AddTodoBox>
       <form onSubmit={onAddToDoHandler}>
-        <div className="input-box">
+        <InputBox>
           <h3>제목</h3>
 
-          <input
+          <Input
             placeholder="제목을 입력해주세요."
             id="title"
             value={title}
             onChange={onChangeHandler}
           />
           <h3>내용</h3>
-          <input
-            className="input-text"
+          <Input
             placeholder="내용을 입력해주세요."
             id="content"
             value={content}
             onChange={onChangeHandler}
           />
-        </div>
+        </InputBox>
 
         <button>추가하기</button>
       </form>
-    </div>
+    </AddTodoBox>
   );
 };
 
 export default AddForm;
+
+// styled-components
+const AddTodoBox = styled.div`
+  max-width: 1200px;
+  min-width: 800px;
+  height: 150px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  border: 3px solid #e5dbff;
+  border-radius: 20px;
+`;
+
+const InputBox = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+`;
+
+const Input = styled.input`
+  padding: 10px;
+  margin: 0 10px;
+
+  border: none;
+  border-radius: 10px;
+
+  font-weight: 900;
+  font-size: 15px;
+  background: #f3f0ff;
+  color: #495057;
+
+  :focus-visible {
+    outline: none;
+  }
+
+  :hover {
+    background-color: #e5dbff;
+  }
+
+  :focus {
+    background-color: #e5dbff;
+    color: #495057;
+  }
+`;

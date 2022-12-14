@@ -1,32 +1,3 @@
-.list-box {
-  width: 250px;
-  height: 160px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: left;
-  margin-right: 20px;
-  margin-bottom: 20px;
-
-  background-color: white;
-  box-shadow: 1px 1px 2px 3px #e5dbff;
-
-  border: 2px solid #e0bfe8;
-  border-radius: 20px;
-}
-
-.content-text {
-  margin-left: 20px;
-}
-
-.buttons {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
 /* customButton component 분리로 style로 따로 적용 */
 /* .buttons button {
   border: none;
