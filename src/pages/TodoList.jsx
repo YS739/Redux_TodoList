@@ -15,9 +15,9 @@ const ToDoList = () => {
       <Header />
       {/* ToDo 추가하는 input form */}
       <AddForm />
-      <h2>Working...🔥🔥🔥</h2>
+      {/* <h2>Working...🔥🔥🔥</h2> */}
       <TodoContainer />
-      <h2>Done 🎉🎉🎉</h2>
+      {/* <h2>Done 🎉🎉🎉</h2> */}
       {/* <TodoContainer /> */}
     </div>
   );

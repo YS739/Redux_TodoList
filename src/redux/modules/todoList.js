@@ -40,7 +40,7 @@ const initialState = {
       content: "리액트 과제 다시 하기",
       isDone: false,
     },
-    { id: uuidv4(), title: "독서", content: "IT책 10장 읽기", isDone: true },
+    { id: uuidv4(), itle: "독서하기", content: "IT책 10장 읽기", isDone: true },
   ],
 };
 

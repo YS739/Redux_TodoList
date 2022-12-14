@@ -34,24 +34,26 @@ const TodoContainer = () => {
   return (
     <div>
       <div className="list-container">
-        {globalTodo.map(
-          (toDo) =>
-            //map으로 돌면서 isDone이 존재하는(&&) ToDoCards를 반환!
-            toDo.isDone === toDo.isDone && (
-              <div key={toDo.id} className="list-box">
+        <h4>{globalTodo.isDone === false ? "Working" : "Done!!"}</h4>
+        {/* isDone에 접근할 수 있는 방법 찾아야 함. i번째로 하고 싶은데 그럼 map을 돌려야 하나 */}
+        {globalTodo
+          .filter((todo) => todo.isDone === todo.isDone)
+          .map((todo) => {
+            return (
+              <div key={todo.id} className="list-box">
                 <div className="content-text">
-                  <h2>{toDo.title}</h2>
-                  <h4>{toDo.content}</h4>
+                  <h2>{todo.title}</h2>
+                  <h4>{todo.content}</h4>
                 </div>
                 <div className="buttons">
-                  <button onClick={() => deleteToDo(toDo.id)}>삭제하기</button>
-                  <button onClick={() => switchList(toDo.id)}>
-                    {toDo.isDone ? "취소" : "완료"}
+                  <button onClick={() => deleteToDo(todo.id)}>삭제하기</button>
+                  <button onClick={() => switchList(todo.id)}>
+                    {todo.isDone ? "취소" : "완료"}
                   </button>
                 </div>
               </div>
-            )
-        )}
+            );
+          })}
       </div>
     </div>
   );
