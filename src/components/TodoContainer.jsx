@@ -1,13 +1,12 @@
 import { useDispatch, useSelector } from "react-redux";
 import { deleteTodo, switchTodo } from "../redux/modules/todoList";
 
-const TodoContainer = () => {
+const TodoContainer = ({ isActive }) => {
   const dispatch = useDispatch();
 
   // TodoList 값 가져오기
   const globalTodo = useSelector((state) => state.todoList.todo);
   console.log(globalTodo);
-  console.log(globalTodo[0].isDone);
 
   // 삭제하기 버튼을 눌렀을 때
   const handleDeleteToDo = (id) => {
@@ -34,10 +33,9 @@ const TodoContainer = () => {
   return (
     <div>
       <div className="list-container">
-        <h4>{globalTodo.isDone === false ? "Working" : "Done!!"}</h4>
-        {/* isDone에 접근할 수 있는 방법 찾아야 함. i번째로 하고 싶은데 그럼 map을 돌려야 하나 */}
+        <h2>{isActive ? "Working...🔥🔥🔥" : "Done 🎉🎉🎉"}</h2>
         {globalTodo
-          .filter((todo) => todo.isDone === todo.isDone)
+          .filter((todo) => todo.isDone === !isActive)
           .map((todo) => {
             return (
               <div key={todo.id} className="list-box">

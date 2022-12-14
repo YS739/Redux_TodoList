@@ -13,12 +13,15 @@ const ToDoList = () => {
   return (
     <div>
       <Header />
+
       {/* ToDo 추가하는 input form */}
       <AddForm />
-      {/* <h2>Working...🔥🔥🔥</h2> */}
-      <TodoContainer />
-      {/* <h2>Done 🎉🎉🎉</h2> */}
-      {/* <TodoContainer /> */}
+
+      {/* Working Todo List */}
+      <TodoContainer isActive={true} />
+
+      {/* Done Todo List */}
+      <TodoContainer isActive={false} />
     </div>
   );
 };

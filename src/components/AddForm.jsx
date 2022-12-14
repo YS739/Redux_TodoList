@@ -10,7 +10,7 @@ const AddForm = () => {
   const dispatch = useDispatch();
 
   //   todoList 값 가져오기
-  const globalTodo = useSelector((state) => state.todoList.todo);
+  // const globalTodo = useSelector((state) => state.todoList.todo);
 
   //   input에 입력한 값 받기
   const onChangeHandler = (e) => {
