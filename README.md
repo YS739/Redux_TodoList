@@ -26,4 +26,8 @@
 
 ## Folder structure
 
-<img width="200" alt="스크린샷_20221214_080007" src="https://user-images.githubusercontent.com/112805225/207579454-4c810a7b-4c79-468b-94c1-cb8ac6f2044b.png">
+<img width="150" alt="스크린샷_20221214_080007" src="https://user-images.githubusercontent.com/112805225/207579454-4c810a7b-4c79-468b-94c1-cb8ac6f2044b.png">
+
+changed to
+<img width="200" alt="image" src="https://user-images.githubusercontent.com/112805225/207605280-d71d63f8-f193-4a2e-b6f7-737d49fdbe09.png">
+
