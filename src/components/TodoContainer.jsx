@@ -46,7 +46,6 @@ const TodoContainer = ({ isActive }) => {
                         <span style={{ cursor: "pointer" }}>➡️ 상세보기</span>
                       </Link>
                     </div>
-                    //  이 부분도 working, done에 따라 각각 나오게. 현재는 두개씩 나옴
                   );
                 })}
               </div>

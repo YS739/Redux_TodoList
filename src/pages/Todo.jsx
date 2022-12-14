@@ -1,5 +1,5 @@
 // todo 상세 페이지
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 const Todo = () => {
@@ -15,8 +15,7 @@ const Todo = () => {
     <div>
       <div>
         ID: {theTodo.id}
-        <button>Todo List</button>
-        {/* link or navigate로 구현하기 */}
+        <Link to="/">Todo List</Link>
       </div>
       <div>{theTodo.title}</div>
       <div>{theTodo.content}</div>
