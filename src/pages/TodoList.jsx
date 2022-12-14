@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 const ToDoList = () => {
   return (
-    <div>
+    <Main>
       {/* ToDo 추가하는 input form */}
       <AddForm />
 
@@ -14,8 +14,14 @@ const ToDoList = () => {
 
       {/* Done Todo List */}
       <TodoContainer isActive={false} />
-    </div>
+    </Main>
   );
 };
 
 export default ToDoList;
+
+// styled-components
+const Main = styled.div`
+  max-width: 1200px;
+  min-width: 800px;
+`;

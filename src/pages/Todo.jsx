@@ -15,13 +15,13 @@ const Todo = () => {
     <DetailBox>
       <CardHead>
         ID: {theTodo.id.slice(0, 8)}
-        <TodoNavi
+        <GoTodo
           onClick={() => {
             navigate("/");
           }}
         >
           ➡️ Todo List
-        </TodoNavi>
+        </GoTodo>
       </CardHead>
       <CardMain>
         <span>{theTodo.isDone === false ? "🔥Working🔥" : "🎉Done🎉"}</span>
@@ -77,7 +77,7 @@ const CardMain = styled.div`
   }
 `;
 
-const TodoNavi = styled.button`
+const GoTodo = styled.button`
   float: right;
   margin-right: 15px;
 
