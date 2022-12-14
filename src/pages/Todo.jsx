@@ -11,17 +11,19 @@ const Todo = () => {
 
   return (
     <DetailBox>
-      <Top>
+      <CardHead>
         ID: {theTodo.id.slice(0, 8)}
         <Link to="/">
           <TodoLink>➡️ Todo List</TodoLink>
         </Link>
-      </Top>
-      <MainContent>
-        <h3>{theTodo.isDone === false ? "진행중" : "완료"}</h3>
+      </CardHead>
+      <CardMain>
+        <h2 style={{ margin: "0 auto" }}>
+          {theTodo.isDone === false ? "Working🔥" : "Done🎉"}
+        </h2>
         <h1>제목: {theTodo.title}</h1>
         <h2>내용: {theTodo.content}</h2>
-      </MainContent>
+      </CardMain>
     </DetailBox>
   );
 };
@@ -44,7 +46,7 @@ const DetailBox = styled.div`
   border-radius: 20px;
 `;
 
-const Top = styled.div`
+const CardHead = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -54,7 +56,7 @@ const Top = styled.div`
   font-size: 20px;
 `;
 
-const MainContent = styled.div`
+const CardMain = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -62,7 +64,7 @@ const MainContent = styled.div`
   margin-top: 5px;
   margin-left: 30px;
 
-  line-height: 30px;
+  line-height: 35px;
 `;
 
 const TodoLink = styled.span`
