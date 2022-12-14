@@ -1,7 +1,7 @@
 import React from "react";
 import AddForm from "../../redux/modules/AddForm";
 import TodoContainer from "../../redux/modules/TodoContainer";
-import styled from "styled-components";
+import { Main } from "./style";
 
 const ToDoList = () => {
   return (
@@ -19,9 +19,3 @@ const ToDoList = () => {
 };
 
 export default ToDoList;
-
-// styled-components
-const Main = styled.div`
-  max-width: 1200px;
-  min-width: 800px;
-`;
