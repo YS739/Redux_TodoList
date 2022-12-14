@@ -38,16 +38,17 @@ const TodoContainer = ({ isActive }) => {
                   <button onClick={() => handleSwitchState(todo.id)}>
                     {todo.isDone ? "취소" : "완료"}
                   </button>
-                  {globalTodo.map((one) => {
-                    return (
-                      <div key={one.id}>
-                        <Link to={`/works/${one.id}`}>
-                          <span style={{ cursor: "pointer" }}>➡️ 상세보기</span>
-                        </Link>
-                      </div>
-                    );
-                  })}
                 </div>
+                {globalTodo.map((one) => {
+                  return (
+                    <div key={one.id}>
+                      <Link to={`/${one.id}`}>
+                        <span style={{ cursor: "pointer" }}>➡️ 상세보기</span>
+                      </Link>
+                    </div>
+                    //  이 부분도 working, done에 따라 각각 나오게. 현재는 두개씩 나옴
+                  );
+                })}
               </div>
             );
           })}

@@ -16,6 +16,7 @@ export const addTodo = (payload) => {
 
 // todo 삭제하기
 export const deleteTodo = (payload) => {
+  console.log(payload);
   return {
     type: DELETE_TODO,
     payload,
@@ -39,7 +40,12 @@ const initialState = {
       content: "리액트 과제 다시 하기",
       isDone: false,
     },
-    { id: uuidv4(), itle: "독서하기", content: "IT책 10장 읽기", isDone: true },
+    {
+      id: uuidv4(),
+      title: "독서하기",
+      content: "IT책 10장 읽기",
+      isDone: true,
+    },
   ],
 };
 
@@ -59,7 +65,7 @@ const TodoS = (state = initialState, action) => {
       const newTodo = delState.filter((t) => t.id !== action.payload);
       console.log(newTodo);
       return {
-        todo: [...state.todo, newTodo],
+        todo: [newTodo],
       };
 
     // 상태 변경(완료, 취소)
