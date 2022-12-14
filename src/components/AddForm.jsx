@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addTodo } from "../redux/modules/todoList";
+import { v4 as uuidv4 } from "uuid";
 
 const AddForm = () => {
   const [title, setTitle] = useState("");
@@ -27,7 +28,7 @@ const AddForm = () => {
     if (title && content) {
       e.preventDefault();
       const newToDoS = {
-        id: globalTodo.length + 1,
+        id: uuidv4(),
         title: title,
         content: content,
         isDone: false,

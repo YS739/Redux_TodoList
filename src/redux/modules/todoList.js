@@ -1,3 +1,5 @@
+import { v4 as uuidv4 } from "uuid";
+
 // Action Value
 const ADD_TODO = "ADD_TODO";
 const DELETE_TODO = "DELETE_TODO";
@@ -32,8 +34,13 @@ export const switchTodo = (payload) => {
 // Initial State
 const initialState = {
   todo: [
-    { id: 0, title: "리액트", content: "리액트 과제 다시 하기", isDone: false },
-    { id: 1, title: "독서", content: "IT책 10장 읽기", isDone: true },
+    {
+      id: uuidv4(),
+      title: "리액트",
+      content: "리액트 과제 다시 하기",
+      isDone: false,
+    },
+    { id: uuidv4(), title: "독서", content: "IT책 10장 읽기", isDone: true },
   ],
 };
 
