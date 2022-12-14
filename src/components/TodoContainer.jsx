@@ -6,7 +6,6 @@ const TodoContainer = ({ isActive }) => {
 
   // TodoList 값 가져오기
   const globalTodo = useSelector((state) => state.todoList.todo);
-  console.log(globalTodo);
 
   // 삭제하기 버튼을 눌렀을 때
   const handleDeleteToDo = (id) => {

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { addTodo } from "../redux/modules/todoList";
 import { v4 as uuidv4 } from "uuid";
 
@@ -8,9 +8,6 @@ const AddForm = () => {
   const [content, setContent] = useState("");
 
   const dispatch = useDispatch();
-
-  //   todoList 값 가져오기
-  // const globalTodo = useSelector((state) => state.todoList.todo);
 
   //   input에 입력한 값 받기
   const onChangeHandler = (e) => {

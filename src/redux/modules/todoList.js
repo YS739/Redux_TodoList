@@ -16,7 +16,6 @@ export const addTodo = (payload) => {
 
 // todo 삭제하기
 export const deleteTodo = (payload) => {
-  console.log(payload);
   return {
     type: DELETE_TODO,
     payload,
@@ -58,11 +57,11 @@ const todoList = (state = initialState, action) => {
         ...state,
         todo: [...state.todo, action.payload],
       };
-    case SWITCH_TODO:
-      return {
-        ...state,
-        todo: [...state.todo, action.payload],
-      };
+    // case SWITCH_TODO:
+    //   return {
+    //     ...state,
+    //     todo: [...state.todo, action.payload],
+    //   };
     default:
       return state;
   }
