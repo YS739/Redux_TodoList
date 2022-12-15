@@ -8,9 +8,7 @@
 
 ## Check here
 
-### 👉 [Redux Todo List](https://react-todo-list-omega-three.vercel.app/)
-
-<!-- 배포하고 주소 다시 넣기  -->
+### 👉 [Redux Todo List](https://redux-todo-list-sigma.vercel.app/)
 
 ## Features
 
@@ -28,7 +26,6 @@
 
 <img width="150" alt="스크린샷_20221214_080007" src="https://user-images.githubusercontent.com/112805225/207579454-4c810a7b-4c79-468b-94c1-cb8ac6f2044b.png">
 
-
 ## changed Folder structure
-<img width="200" alt="image" src="https://user-images.githubusercontent.com/112805225/207605280-d71d63f8-f193-4a2e-b6f7-737d49fdbe09.png">
 
+<img width="200" alt="image" src="https://user-images.githubusercontent.com/112805225/207605280-d71d63f8-f193-4a2e-b6f7-737d49fdbe09.png">
