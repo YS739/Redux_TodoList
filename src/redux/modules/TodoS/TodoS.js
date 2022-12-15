@@ -67,14 +67,26 @@ const TodoS = (state = initialState, action) => {
 
     // 삭제하기
     case DELETE_TODO:
+      const newTodo = state.todo.filter((del) => del.id !== action.payload);
       return {
-        todo: action.payload,
+        todo: newTodo,
       };
 
     // 상태 변경(완료, 취소)
     case SWITCH_TODO:
+      const switchId = state.todo.map((todo) => {
+        if (todo.id === action.payload) {
+          return {
+            ...todo,
+            isDone: !todo.isDone,
+          };
+        }
+        return {
+          ...todo,
+        };
+      });
       return {
-        todo: action.payload,
+        todo: switchId,
       };
     default:
       return state;

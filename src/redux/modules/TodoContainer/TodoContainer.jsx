@@ -19,25 +19,12 @@ const TodoContainer = ({ isActive }) => {
 
   // 삭제하기 버튼을 눌렀을 때
   const handleDeleteToDo = (id) => {
-    const newTodo = globalTodo.filter((del) => del.id !== id);
-    dispatch(deleteTodo(newTodo));
-    console.log(newTodo);
+    dispatch(deleteTodo(id));
   };
 
   // 완료, 취소 버튼 눌렀을 때
   const handleSwitchState = (id) => {
-    const switchId = globalTodo.map((todo) => {
-      if (todo.id === id) {
-        return {
-          ...todo,
-          isDone: !todo.isDone,
-        };
-      }
-      return {
-        ...todo,
-      };
-    });
-    dispatch(switchTodo(switchId));
+    dispatch(switchTodo(id));
   };
 
   return (
