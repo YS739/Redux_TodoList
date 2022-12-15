@@ -23,7 +23,7 @@ const AllList = styled.div`
 
 const ListBox = styled.div`
   width: 260px;
-  height: 160px;
+  height: 170px;
 
   display: flex;
   flex-direction: column;
@@ -41,6 +41,10 @@ const ListBox = styled.div`
 
 const ContentText = styled.div`
   margin-left: 20px;
+
+  span {
+    font-size: 18px;
+  }
 `;
 
 const ButtonS = styled.div`
@@ -51,8 +55,12 @@ const ButtonS = styled.div`
 `;
 
 const DetailLink = styled.span`
-  float: right;
+  display: flex;
+  justify-content: end;
+  align-items: right;
   margin-right: 15px;
+  margin-top: 0;
+  margin-bottom: 5px;
 
   color: black;
   cursor: pointer;
@@ -63,6 +71,10 @@ const DetailLink = styled.span`
 
   font-size: 15px;
   font-weight: bold;
+
+  a {
+    text-decoration: none;
+  }
 `;
 
 export { ListContainer, AllList, ListBox, ContentText, ButtonS, DetailLink };

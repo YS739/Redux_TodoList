@@ -70,6 +70,7 @@ const AddForm = () => {
             placeholder="제목을 입력해주세요."
             id="title"
             value={title}
+            maxLength="15"
             onChange={onChangeHandler}
           />
           <h3>내용</h3>

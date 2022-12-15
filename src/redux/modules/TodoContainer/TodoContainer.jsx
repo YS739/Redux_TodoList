@@ -42,19 +42,19 @@ const TodoContainer = ({ isActive }) => {
 
   return (
     <ListContainer>
-      <h2>{isActive ? "Working...🔥🔥🔥" : "Done 🎉🎉🎉"}</h2>
+      <h1>{isActive ? "Working...🔥🔥🔥" : "Done 🎉🎉🎉"}</h1>
       <AllList>
         {globalTodo
           .filter((todo) => todo.isDone === !isActive)
           .map((todo) => {
             return (
               <ListBox key={todo.id}>
-                <Link to={`/${todo.id}`} style={{ fontWeight: "bold" }}>
-                  <DetailLink>➡️ 상세보기</DetailLink>
-                </Link>
+                <DetailLink>
+                  <Link to={`/${todo.id}`}>➡️ 상세보기</Link>
+                </DetailLink>
 
                 <ContentText>
-                  <h2 style={{ marginTop: 0 }}>{todo.title}</h2>
+                  <span>{todo.title}</span>
                   <h4>{todo.content}</h4>
                 </ContentText>
                 <ButtonS>
