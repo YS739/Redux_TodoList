@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 // styled-components
 const DetailBox = styled.div`
-  width: 460px;
-  height: 300px;
+  width: 500px;
+  height: 360px;
 
   display: flex;
   flex-direction: column;

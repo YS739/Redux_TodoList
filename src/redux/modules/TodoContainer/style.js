@@ -42,8 +42,22 @@ const ListBox = styled.div`
 const ContentText = styled.div`
   margin-left: 20px;
 
-  span {
-    font-size: 18px;
+  div {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    font-size: 20px;
+  }
+
+  h4 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
   }
 `;
 
@@ -57,12 +71,10 @@ const ButtonS = styled.div`
 const DetailLink = styled.span`
   display: flex;
   justify-content: end;
-  align-items: right;
   margin-right: 15px;
   margin-top: 0;
   margin-bottom: 5px;
 
-  color: black;
   cursor: pointer;
 
   :hover {
@@ -74,6 +86,7 @@ const DetailLink = styled.span`
 
   a {
     text-decoration: none;
+    color: black;
   }
 `;
 

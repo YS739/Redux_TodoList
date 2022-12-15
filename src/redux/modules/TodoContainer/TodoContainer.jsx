@@ -49,12 +49,11 @@ const TodoContainer = ({ isActive }) => {
           .map((todo) => {
             return (
               <ListBox key={todo.id}>
-                <DetailLink>
-                  <Link to={`/${todo.id}`}>➡️ 상세보기</Link>
-                </DetailLink>
-
                 <ContentText>
-                  <span>{todo.title}</span>
+                  <DetailLink>
+                    <Link to={`/${todo.id}`}>➡️ 상세보기</Link>
+                  </DetailLink>
+                  <div>{todo.title}</div>
                   <h4>{todo.content}</h4>
                 </ContentText>
                 <ButtonS>

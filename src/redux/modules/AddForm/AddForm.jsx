@@ -70,7 +70,7 @@ const AddForm = () => {
             placeholder="제목을 입력해주세요."
             id="title"
             value={title}
-            maxLength="15"
+            maxLength="20"
             onChange={onChangeHandler}
           />
           <h3>내용</h3>
@@ -78,6 +78,7 @@ const AddForm = () => {
             placeholder="내용을 입력해주세요."
             id="content"
             value={content}
+            maxLength="50"
             onChange={onChangeHandler}
           />
           <CustomButton btnName="add">추가하기</CustomButton>
