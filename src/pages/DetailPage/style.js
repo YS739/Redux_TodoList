@@ -40,7 +40,7 @@ const CardMain = styled.div`
   /* Working, Done 표시 */
   span {
     margin: 0 auto;
-    color: #e5dbff;
+    color: #6d67e4;
     font-size: 32px;
   }
 `;
