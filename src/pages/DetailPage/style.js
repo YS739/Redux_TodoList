@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-// styled-components
 const DetailBox = styled.div`
   width: 500px;
   height: 360px;
@@ -16,6 +15,7 @@ const DetailBox = styled.div`
   border-radius: 20px;
 `;
 
+// ID, Todo, List 부분
 const CardHead = styled.div`
   display: flex;
   flex-direction: row;
@@ -26,6 +26,7 @@ const CardHead = styled.div`
   font-size: 20px;
 `;
 
+// 제목, 내용
 const CardMain = styled.div`
   display: flex;
   flex-direction: column;
@@ -36,18 +37,20 @@ const CardMain = styled.div`
 
   line-height: 35px;
 
+  /* Working, Done 표시 */
   span {
     margin: 0 auto;
-    color: #db8af0df;
+    color: #e5dbff;
     font-size: 32px;
   }
 `;
 
+// Todo List 버튼
 const GoTodo = styled.button`
   float: right;
   margin-right: 15px;
 
-  color: black;
+  color: #495057;
   cursor: pointer;
 
   :hover {
@@ -56,7 +59,7 @@ const GoTodo = styled.button`
 
   background-color: transparent;
   border: none;
-  font-size: 17px;
+  font-size: 20px;
   font-weight: 600;
 `;
 

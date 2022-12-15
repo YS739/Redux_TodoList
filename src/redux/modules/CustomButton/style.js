@@ -12,6 +12,7 @@ const AddBtnStyle = styled.button`
   font-size: 15px;
   font-weight: 900;
   letter-spacing: 2px;
+  color: #495057;
 
   :hover {
     color: #9775fa;
@@ -33,6 +34,7 @@ const BtnStyle = styled.button`
   font-size: 14px;
   font-weight: 900;
   letter-spacing: 2px;
+  color: #495057;
 
   :hover {
     color: #9775fa;
