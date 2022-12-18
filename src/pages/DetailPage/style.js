@@ -45,7 +45,7 @@ const CardMain = styled.div`
   }
 `;
 
-// Todo List 버튼
+// Todo List로 가는 버튼
 const GoTodo = styled.button`
   float: right;
   margin-right: 15px;

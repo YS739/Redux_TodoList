@@ -1,5 +1,5 @@
 // todo 상세 페이지
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { DetailBox, CardHead, CardMain, GoTodo } from "./style";
