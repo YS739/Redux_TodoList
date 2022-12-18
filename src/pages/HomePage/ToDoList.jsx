@@ -1,5 +1,5 @@
 import React from "react";
-import AddForm from "../../redux/modules/AddForm";
+import AddForm from "../../redux/components/AddForm";
 import TodoContainer from "../../redux/modules/TodoContainer";
 import { Main } from "./style";
 
