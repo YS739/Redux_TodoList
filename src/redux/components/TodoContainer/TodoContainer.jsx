@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { deleteTodo, switchTodo } from "../TodoS";
+import { deleteTodo, switchTodo } from "../../modules";
 import { Link } from "react-router-dom";
 import CustomButton from "../CustomButton";
 import {
@@ -19,7 +19,9 @@ const TodoContainer = ({ isActive }) => {
 
   // 삭제하기 버튼을 눌렀을 때
   const handleDeleteToDo = (id) => {
-    dispatch(deleteTodo(id));
+    if (window.confirm("정말 삭제하시겠습니까?") === true) {
+      dispatch(deleteTodo(id));
+    }
   };
 
   // 완료, 취소 버튼 눌렀을 때
