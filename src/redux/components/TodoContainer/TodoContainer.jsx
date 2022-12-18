@@ -18,6 +18,8 @@ const TodoContainer = ({ isActive }) => {
   const globalTodo = useSelector((state) => state.TodoS.todo);
 
   // 삭제하기 버튼을 눌렀을 때
+  /** 삭제 확인 창 추가 22.12.18
+   */
   const handleDeleteToDo = (id) => {
     if (window.confirm("정말 삭제하시겠습니까?") === true) {
       dispatch(deleteTodo(id));
