@@ -26,6 +26,10 @@
 
 <img width="150" alt="스크린샷_20221214_080007" src="https://user-images.githubusercontent.com/112805225/207579454-4c810a7b-4c79-468b-94c1-cb8ac6f2044b.png">
 
-## changed Folder structure
+## changed Folder structure_1
 
-<img width="200" alt="image" src="https://user-images.githubusercontent.com/112805225/207605280-d71d63f8-f193-4a2e-b6f7-737d49fdbe09.png">
+<img width="150" alt="image" src="https://user-images.githubusercontent.com/112805225/207605280-d71d63f8-f193-4a2e-b6f7-737d49fdbe09.png">
+
+## changed Folder structure_2
+
+<img width="150" alt="image" src="https://user-images.githubusercontent.com/112805225/208276335-8d8a2d3d-e3d2-4f4a-bd87-e731e4d19375.png">
